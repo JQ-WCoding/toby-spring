@@ -22,13 +22,4 @@ public class DaoFactory {
     public ConnectionMaker connectionMaker() {
         return new DConnectionMaker();
     }
-
-    public static void main(String[] args) {
-        DaoFactory factory = new DaoFactory();
-        UserDao dao1 = factory.userDAO();
-        UserDao dao2 = factory.userDAO();
-
-        System.out.println( "dao1 = " + dao1 );
-        System.out.println( "dao2 = " + dao2 );
-    }
 }
