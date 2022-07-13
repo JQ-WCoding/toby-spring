@@ -20,6 +20,9 @@ public class DaoFactory {
 
     @Bean
     public ConnectionMaker connectionMaker() {
-        return new DConnectionMaker();
+        // return new DConnectionMaker();
+        // 개발 운영을 factory 클래스의 코드 한줄만 변경하여 di를 자유롭게 변경할 수 있다.
+        return new LocalDBConnectionMaker();
+        // return new PublicDBConnectionMaker();
     }
 }
