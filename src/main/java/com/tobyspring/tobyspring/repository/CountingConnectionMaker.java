@@ -6,7 +6,7 @@ public class CountingConnectionMaker implements ConnectionMaker {
 
     // 연결 갯수 확인용
     int counter = 0;
-    private ConnectionMaker realConnectionMaker;
+    private final ConnectionMaker realConnectionMaker;
 
     //생성자 -> 의존성 주입
     public CountingConnectionMaker(ConnectionMaker realConnectionMaker) {
